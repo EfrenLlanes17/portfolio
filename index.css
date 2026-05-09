@@ -1,0 +1,40 @@
+body {
+    background-image: url("images/blackSpace1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+header {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 40px;
+}
+
+.name {
+    margin: 0;
+    font-size: 23px;
+    font-weight: 600;
+}
+
+.right {
+    display: flex;
+    gap: 25px;
+}
+
+.right h2 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.right h2:hover {
+    text-decoration: underline;
+}
