@@ -38,3 +38,17 @@ header {
 .right h2:hover {
     text-decoration: underline;
 }
+
+.mainContent{
+    background-color: black;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    border-radius: 12px;
+    margin: 20px;
+}
+
+.item{
+    color: white;
+}
