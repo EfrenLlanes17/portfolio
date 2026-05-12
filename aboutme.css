@@ -9,12 +9,10 @@ body {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-
     font-family: 'Courier New', Courier, monospace;
     color: white;
 }
 
-/* HEADER */
 
 header {
     background-color: black;
