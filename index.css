@@ -2,7 +2,7 @@ body {
     background-image: url("images/background/blackSpace1.jpg");
     background-size: cover;
     background-position: center;
-    background-repeat: repeat;
+    background-attachment: fixed;
     height: 100vh;
     margin: 0;
     font-family: 'Courier New', Courier, monospace;
@@ -46,7 +46,8 @@ header {
 }
 
 .mainContent{
-    background-color: black;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(4px);
     padding: 20px;
     border-radius: 12px;
     margin: 20px;
