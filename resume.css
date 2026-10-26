@@ -1,71 +1,138 @@
+:root {
+    --bg: #050505;
+    --bg-strong: #111111;
+    --panel: rgba(17, 17, 17, 0.9);
+    --panel-border: rgba(255, 255, 255, 0.08);
+    --text: #f5f5f5;
+    --muted: #a1a1aa;
+    --accent: #ffffff;
+    --accent-2: #e5e7eb;
+    --shadow: rgba(0, 0, 0, 0.78);
+}
+
+* {
+    box-sizing: border-box;
+}
+
 body {
-    background-image: url("images/background/blackSpace1.jpg");
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    height: 100vh;
     margin: 0;
-    font-family: 'Courier New', Courier, monospace;
+    min-height: 100vh;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text);
+    background:
+        radial-gradient(circle at top left, rgba(255, 255, 255, 0.04), transparent 24%),
+        radial-gradient(circle at bottom right, rgba(255, 255, 255, 0.025), transparent 26%),
+        linear-gradient(135deg, var(--bg) 0%, #111111 42%, var(--bg-strong) 100%);
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+    background-size: 34px 34px;
+    mask-image: radial-gradient(circle at center, black 42%, transparent 100%);
+    pointer-events: none;
 }
 
 header {
-    background-color: black;
-    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 10;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 25px 40px;
+    padding: 20px 40px;
+    background: rgba(0, 0, 0, 0.9);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
 }
 
 .name {
     margin: 0;
-    font-size: 23px;
-    font-weight: 600;
+    font-size: clamp(1.2rem, 1.8vw, 1.8rem);
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
 }
 
 .right {
     display: flex;
-    gap: 25px;
-    
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
 }
 
-.right a{
-    color: white;
+.right a {
+    color: var(--text);
     text-decoration: none;
 }
 
 .right h2 {
     margin: 0;
-    font-size: 20px;
-    font-weight: 400;
+    padding: 10px 16px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.02);
+    font-size: 0.96rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
     cursor: pointer;
+    transition: all 0.25s ease;
 }
 
 .right h2:hover {
-    text-decoration: underline;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
+    border-color: rgba(255, 255, 255, 0.22);
+    box-shadow: 0 0 18px rgba(255, 255, 255, 0.06);
 }
 
-.mainContent{
-    background: rgba(0, 0, 0, 0.75);
-    backdrop-filter: blur(4px);
-    padding: 20px;
-    border-radius: 12px;
-    margin: 20px;
+.mainContent {
+    max-width: 1200px;
+    margin: 34px auto 50px;
+    padding: 24px 18px 18px;
+    background: var(--panel);
+    border: 1px solid var(--panel-border);
+    border-radius: 24px;
+    box-shadow: 0 20px 40px var(--shadow);
+    backdrop-filter: blur(12px);
 }
 
-.year{
+.year {
     text-align: center;
-    color: white;
-    font-size: 25px;
+    color: var(--text);
+    font-size: clamp(1.7rem, 2.4vw, 2.8rem);
+    margin-bottom: 24px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-weight: 700;
 }
 
+embed {
+    display: block;
+    width: 100%;
+    height: 80vh;
+    min-height: 640px;
+    border: 1px solid rgba(148, 163, 184, 0.18);
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.04);
+}
 
 @media (max-width: 768px) {
-
     header {
         flex-direction: column;
         gap: 15px;
+        padding: 18px 20px;
     }
 
-    
+    .mainContent {
+        margin: 20px 16px 34px;
+        padding: 16px 12px 12px;
+    }
+
+    embed {
+        min-height: 500px;
+    }
 }
