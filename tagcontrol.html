@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | TagControl</title>
+    <link rel="stylesheet" href="tagcontrol.css">
+</head>
+<body>
+    <header>
+        <h1 class="name">Efren Llanes</h1>
+        <nav class="right" aria-label="Main navigation">
+            <a href="index.html"><h2>Projects</h2></a>
+            <a href="aboutme.html"><h2>About Me</h2></a>
+            <a href="resume.html"><h2>Resume</h2></a>
+        </nav>
+    </header>
+
+    <main class="mainContent">
+        <section class="hero">
+            <div class="heroText">
+                <p class="tag">Backend Software Engineering • Hobby Lobby</p>
+                <h1 class="projectTitle">TagControl</h1>
+                <p class="heroDescription">
+                    A release management application for creating and viewing software releases across four OpenShift clusters.
+                </p>
+            </div>
+
+            <img
+                class="projectImage"
+                src="images/aboutme/hobbyLobby.png"
+                alt="Hobby Lobby logo"
+            >
+        </section>
+
+        <section class="details" aria-label="Project details">
+            <article class="infoCard">
+                <h2>Overview</h2>
+                <p>
+                    Built and deployed TagControl to manage application releases across four OpenShift clusters.
+                    The app connected to GitHub through backend endpoints, with ASP.NET Core 10 providing the cache layer and API between the Angular frontend and GitHub API.
+                </p>
+            </article>
+
+            <article class="infoCard">
+                <h2>Compliance workflow</h2>
+                <p>
+                    Integrated the backend with a PCI DSS application to automatically populate release documentation with Git commit and Jira ticket information, reducing manual documentation work.
+                </p>
+            </article>
+
+            <article class="infoCard">
+                <h2>API contracts</h2>
+                <p>
+                    Designed and implemented request and response contracts between application layers using TypeScript and C#.
+                </p>
+            </article>
+
+            <article class="infoCard">
+                <h2>Technology</h2>
+                <p>Angular • TypeScript • C# • ASP.NET Core 10 • OpenShift • GitHub API</p>
+            </article>
+        </section>
+    </main>
+</body>
+</html>
