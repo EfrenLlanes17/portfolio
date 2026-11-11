@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | MerakiManager</title>
+    <link rel="stylesheet" href="merakimanager.css">
+</head>
+<body>
+    <header>
+        <h1 class="name">Efren Llanes</h1>
+        <nav class="right" aria-label="Main navigation">
+            <a href="index.html"><h2>Projects</h2></a>
+            <a href="aboutme.html"><h2>About Me</h2></a>
+            <a href="resume.html"><h2>Resume</h2></a>
+        </nav>
+    </header>
+
+    <main class="mainContent">
+        <section class="hero">
+            <div class="heroText">
+                <p class="tag">UCO Network Management</p>
+                <h1 class="projectTitle">MerakiManager</h1>
+                <p class="heroDescription">
+                    A network management application for visualizing Meraki wireless access point data and simplifying network and SSID setup.
+                </p>
+            </div>
+
+            <img
+                class="projectImage"
+                src="images/aboutme/ucologo.png"
+                alt="University of Central Oklahoma logo"
+            >
+        </section>
+
+        <section class="details" aria-label="Project details">
+            <article class="infoCard">
+                <h2>Network dashboard</h2>
+                <p>
+                    Used the Meraki API to build a dashboard that makes client data from Meraki-managed wireless access points easier to visualize, along with CDP neighbors for each network.
+                </p>
+            </article>
+
+            <article class="infoCard">
+                <h2>Simplified setup</h2>
+                <p>
+                    Streamlined network creation, claiming hardware to a network, and automatically configuring an SSID as part of the setup process.
+                </p>
+            </article>
+
+            <article class="infoCard">
+                <h2>Multi-network SSID management</h2>
+                <p>
+                    Enabled users to configure an SSID and apply it to multiple networks at the same time.
+                </p>
+            </article>
+
+            <article class="infoCard">
+                <h2>Technology</h2>
+                <p>C# Web API • Angular • Meraki API • RADIUS Authentication</p>
+            </article>
+        </section>
+    </main>
+</body>
+</html>
